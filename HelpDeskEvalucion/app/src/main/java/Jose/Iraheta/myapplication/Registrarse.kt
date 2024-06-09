@@ -1,9 +1,11 @@
 package Jose.Iraheta.myapplication
 
 import Modelo.ClaseConexion
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -30,13 +32,14 @@ class Registrarse : AppCompatActivity() {
         val txtContrasena = findViewById<EditText>(R.id.txtContrasenaRegistrarse)
         val btnRegistraseR = findViewById<Button>(R.id.btnRegistrarseR)
         val btnIngresarR = findViewById<Button>(R.id.btnIngresarR)
+        val imgVolverR = findViewById<ImageView>(R.id.imgVolver)
 
 
         btnRegistraseR.setOnClickListener {
             GlobalScope.launch(Dispatchers.IO) {
                 val objConexion = ClaseConexion().cadenaConexion()
 
-                val crearUsuario  = objConexion?.prepareStatement("insert into tbUsuario(uuid_Usuario,correoElectronico,clave) values(?,?,?)")!!
+                val crearUsuario  = objConexion?.prepareStatement("insert into tbUsuarioo(uuid_Usuario,correoElectronico,clave) values(?,?,?)")!!
 
                 crearUsuario.setString(1, UUID.randomUUID().toString())
                 crearUsuario.setString(2, txtCorreoRegistrarse.text.toString())
@@ -49,6 +52,17 @@ class Registrarse : AppCompatActivity() {
                     txtContrasena.setText("")
                 }
             }
+        }
+
+        btnIngresarR.setOnClickListener {
+            val pantallaLogin = Intent(this, MainActivity::class.java)
+            startActivity(pantallaLogin)
+
+        }
+
+        imgVolverR.setOnClickListener {
+            val pantallaLogin = Intent(this, MainActivity::class.java)
+            startActivity(pantallaLogin)
         }
     }
 }

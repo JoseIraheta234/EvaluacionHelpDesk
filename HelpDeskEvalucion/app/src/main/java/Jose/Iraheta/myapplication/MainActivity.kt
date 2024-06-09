@@ -34,26 +34,31 @@ class MainActivity : AppCompatActivity() {
 
         btnIngresar.setOnClickListener {
 
-            //val pantallaPrincipal = Intent(this, )
+            val pantallaPrincipal = Intent(this, Pantalla_Inicio::class.java)
 
             GlobalScope.launch(Dispatchers.IO) {
 
                 val objConexion = ClaseConexion().cadenaConexion()
 
-                val comprobarUsuario = objConexion?.prepareStatement("select * from tbUsuario WHERE correoElectronico = ? AND clave = ?")!!
+                val comprobarUsuario = objConexion?.prepareStatement("SELECT * FROM tbUsuarioo WHERE correoElectronico = ? AND clave = ?")!!
                 comprobarUsuario.setString(1,txtCorreoDeLogin.text.toString())
                 comprobarUsuario.setString(2,txtContrasenaLogin.text.toString())
 
                 val resultado = comprobarUsuario.executeQuery()
 
                 if(resultado.next()) {
-                    //startActivity(pantallaPrincipal)
+                    startActivity(pantallaPrincipal)
                 }
 
                 else{
                     println("Usuario no encontrado, verifique sus credenciales")
                 }
             }
+        }
+
+        btnRegistrar.setOnClickListener {
+            val pantallaRegistrar = Intent(this, Registrarse::class.java)
+            startActivity(pantallaRegistrar)
         }
     }
 }
