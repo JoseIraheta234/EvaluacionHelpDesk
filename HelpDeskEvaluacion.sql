@@ -5,14 +5,17 @@ clave varchar2(50)
 );
 
 create table tbTicket(
-num_Tiket number,
+uuid_Tiket varchar2(50),
 titulo_Ticket varchar2(50),
 descripcion_Ticket varchar(100),
 autor_Ticket varchar2(50),
 email_Contacto_Autor varchar2(70),
-fecha_Creacion_Ticket date,
+fecha_Creacion_Ticket varchar2(50),
 estado_Ticket varchar2(30),
-feche_Finalizacion_Ticket date 
+feche_Finalizacion_Ticket varchar2(50) 
 );
+
+
+drop table tbTicket
 
 

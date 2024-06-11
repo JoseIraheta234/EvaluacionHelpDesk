@@ -9,24 +9,14 @@
     tools:context=".Pantalla_Inicio">
 
   <EditText
-      android:id="@+id/txtNumeroTicket"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:ems="10"
-      android:hint="Numero Ticket"
-      android:inputType="text"
-      tools:layout_editor_absoluteX="34dp"
-      tools:layout_editor_absoluteY="35dp" />
-
-  <EditText
       android:id="@+id/txtTituloTicket"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:ems="10"
       android:hint="Titulo Ticket"
       android:inputType="text"
-      tools:layout_editor_absoluteX="35dp"
-      tools:layout_editor_absoluteY="95dp" />
+      tools:layout_editor_absoluteX="29dp"
+      tools:layout_editor_absoluteY="26dp" />
 
   <EditText
       android:id="@+id/txtDescripcionTicket"
@@ -35,8 +25,8 @@
       android:ems="10"
       android:hint="Descripcion Ticket"
       android:inputType="text"
-      tools:layout_editor_absoluteX="35dp"
-      tools:layout_editor_absoluteY="156dp" />
+      tools:layout_editor_absoluteX="29dp"
+      tools:layout_editor_absoluteY="93dp" />
 
   <EditText
       android:id="@+id/txtAutorTicket"
@@ -45,8 +35,8 @@
       android:ems="10"
       android:hint="Autor del ticket"
       android:inputType="text"
-      tools:layout_editor_absoluteX="36dp"
-      tools:layout_editor_absoluteY="231dp" />
+      tools:layout_editor_absoluteX="29dp"
+      tools:layout_editor_absoluteY="160dp" />
 
   <EditText
       android:id="@+id/txtEmailContacto"
@@ -55,8 +45,8 @@
       android:ems="10"
       android:hint="Email de contacto de autor"
       android:inputType="text"
-      tools:layout_editor_absoluteX="39dp"
-      tools:layout_editor_absoluteY="303dp" />
+      tools:layout_editor_absoluteX="29dp"
+      tools:layout_editor_absoluteY="239dp" />
 
   <EditText
       android:id="@+id/txtFechaCreacionTic"
@@ -65,8 +55,8 @@
       android:ems="10"
       android:hint="Fecha de Creacion de ticket"
       android:inputType="text"
-      tools:layout_editor_absoluteX="42dp"
-      tools:layout_editor_absoluteY="381dp" />
+      tools:layout_editor_absoluteX="29dp"
+      tools:layout_editor_absoluteY="316dp" />
 
   <EditText
       android:id="@+id/txtEstadoTicket"
@@ -75,8 +65,8 @@
       android:ems="10"
       android:hint="EstadoTicket"
       android:inputType="text"
-      tools:layout_editor_absoluteX="44dp"
-      tools:layout_editor_absoluteY="458dp" />
+      tools:layout_editor_absoluteX="29dp"
+      tools:layout_editor_absoluteY="392dp" />
 
   <EditText
       android:id="@+id/txtFechaFinalizacion"
@@ -85,14 +75,22 @@
       android:ems="10"
       android:hint="Fecha de Finalizacion"
       android:inputType="text"
-      tools:layout_editor_absoluteX="45dp"
-      tools:layout_editor_absoluteY="532dp" />
+      tools:layout_editor_absoluteX="29dp"
+      tools:layout_editor_absoluteY="470dp" />
 
   <Button
       android:id="@+id/btnEnviar"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="Enviar"
-      tools:layout_editor_absoluteX="151dp"
-      tools:layout_editor_absoluteY="623dp" />
+      tools:layout_editor_absoluteX="174dp"
+      tools:layout_editor_absoluteY="533dp" />
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rcvTicket"
+      android:layout_width="410dp"
+      android:layout_height="146dp"
+      tools:layout_editor_absoluteX="2dp"
+      tools:layout_editor_absoluteY="589dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
