@@ -13,6 +13,9 @@
         android:theme="@style/Theme.HelpDeskEvalucion"
         tools:targetApi="31">
         <activity
+            android:name=".Mostrar_Detalles_Tickets"
+            android:exported="false" />
+        <activity
             android:name=".item_Card"
             android:exported="false" />
         <activity

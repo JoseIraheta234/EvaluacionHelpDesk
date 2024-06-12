@@ -1,5 +1,6 @@
 package Jose.Iraheta.myapplication
 
+import Jose.Iraheta.myapplication.recycleviewHelper.Adaptador
 import Modelo.ClaseConexion
 import Modelo.dataClassTickets
 import android.os.Bundle
@@ -11,6 +12,10 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class Pantalla_Inicio : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,32 +36,22 @@ class Pantalla_Inicio : AppCompatActivity() {
         val txtEstadoTicket = findViewById<EditText>(R.id.txtEstadoTicket)
         val txtFechaCierreTicket = findViewById<EditText>(R.id.txtFechaFinalizacion)
         val btnEnviar = findViewById<Button>(R.id.btnEnviar)
-
-
-        fun limpiarCampos(){
-
-            txtTituloTicket.setText("")
-            txtDescripcionTicket.setText("")
-            txtAutorTicket.setText("")
-            txtEmailTicket.setText("")
-            txtFechaCreacionTicket.setText("")
-            txtEstadoTicket.setText("")
-            txtFechaCierreTicket.setText("")
-
-        }
-
-
         val rcvTickets = findViewById<RecyclerView>(R.id.rcvTicket)
+
+
+
+
+
         rcvTickets.layoutManager = LinearLayoutManager(this)
 
         fun obtenerDatosTickets(): List<dataClassTickets>{
             val objConexion = ClaseConexion().cadenaConexion()
 
             val statement = objConexion?.createStatement()
-            val resultset = statement?.executeQuery("SELECT * FROM tbTicket")!!
+            val resultset = statement?.executeQuery("SELECT * FROM tbTicket")
 
             val tickets = mutableListOf<dataClassTickets>()
-            while(resultset.next()){
+            while(resultset?.next() == true){
 
                 val uuid = resultset.getString("uuid_Tiket")
                 val titulo = resultset.getString("titulo_Ticket")
@@ -66,11 +61,28 @@ class Pantalla_Inicio : AppCompatActivity() {
                 val fechaCreacion = resultset.getString("fecha_Creacion_Ticket")
                 val estado = resultset.getString("estado_Ticket")
                 val fechaFinalizacion = resultset.getString("feche_Finalizacion_Ticket")
-                val ticket = dataClassTickets(uuid,titulo,descripcion,autor,email,fechaCreacion,estado,fechaFinalizacion)
-                tickets.add(ticket)
+
+                //val TodosLosValores = dataClassTickets(uuid, titulo, descripcion, autor, email, fechaCreacion, estado, fechaFinalizacion)
+                //tickets.add(TodosLosValores)
+
+
+
             }
 
             return tickets
         }
+
+
+        CoroutineScope(Dispatchers.IO).launch {
+
+            //val ticketsDB = obtenerDatosTickets()
+           // withContext(Dispatchers.Main){
+             //   val adapter = Adaptador(//)
+                //rcvTickets.adapter = //
+
+          //  }
+
+        }
+
     }
 }
