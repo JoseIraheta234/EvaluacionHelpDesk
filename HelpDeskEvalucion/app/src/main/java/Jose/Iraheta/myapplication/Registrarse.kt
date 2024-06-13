@@ -39,7 +39,7 @@ class Registrarse : AppCompatActivity() {
             GlobalScope.launch(Dispatchers.IO) {
                 val objConexion = ClaseConexion().cadenaConexion()
 
-                val crearUsuario  = objConexion?.prepareStatement("insert into tbUsuarioo(uuid_Usuario,correoElectronico,clave) values(?,?,?)")!!
+                val crearUsuario  = objConexion?.prepareStatement("insert into tbUsuarioo(uuid_Usuario, correoElectronico, clave) values(?, ?, ?)")!!
 
                 crearUsuario.setString(1, UUID.randomUUID().toString())
                 crearUsuario.setString(2, txtCorreoRegistrarse.text.toString())

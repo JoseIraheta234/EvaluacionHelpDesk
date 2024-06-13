@@ -1,6 +1,6 @@
 package Modelo
 
-class dataClassTickets {
+data class dataClassTickets(
     val uuid: String,
     var titulo : String,
     var descripcion : String,
@@ -9,4 +9,4 @@ class dataClassTickets {
     var fechaCreacion: String,
     var estado: String,
     var fechaFinalizacion: String
-}
+)

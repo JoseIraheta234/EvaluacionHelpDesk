@@ -15,8 +15,12 @@
       android:ems="10"
       android:hint="Titulo Ticket"
       android:inputType="text"
-      tools:layout_editor_absoluteX="29dp"
-      tools:layout_editor_absoluteY="26dp" />
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.144"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.039" />
 
   <EditText
       android:id="@+id/txtDescripcionTicket"
@@ -25,8 +29,12 @@
       android:ems="10"
       android:hint="Descripcion Ticket"
       android:inputType="text"
-      tools:layout_editor_absoluteX="29dp"
-      tools:layout_editor_absoluteY="93dp" />
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.144"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.135" />
 
   <EditText
       android:id="@+id/txtAutorTicket"
@@ -35,8 +43,12 @@
       android:ems="10"
       android:hint="Autor del ticket"
       android:inputType="text"
-      tools:layout_editor_absoluteX="29dp"
-      tools:layout_editor_absoluteY="160dp" />
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.144"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.237" />
 
   <EditText
       android:id="@+id/txtEmailContacto"
@@ -45,8 +57,12 @@
       android:ems="10"
       android:hint="Email de contacto de autor"
       android:inputType="text"
-      tools:layout_editor_absoluteX="29dp"
-      tools:layout_editor_absoluteY="239dp" />
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.208"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.351" />
 
   <EditText
       android:id="@+id/txtFechaCreacionTic"
@@ -55,8 +71,12 @@
       android:ems="10"
       android:hint="Fecha de Creacion de ticket"
       android:inputType="text"
-      tools:layout_editor_absoluteX="29dp"
-      tools:layout_editor_absoluteY="316dp" />
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.198"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.456" />
 
   <EditText
       android:id="@+id/txtEstadoTicket"
@@ -65,8 +85,12 @@
       android:ems="10"
       android:hint="EstadoTicket"
       android:inputType="text"
-      tools:layout_editor_absoluteX="29dp"
-      tools:layout_editor_absoluteY="392dp" />
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.144"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.571" />
 
   <EditText
       android:id="@+id/txtFechaFinalizacion"
@@ -75,22 +99,34 @@
       android:ems="10"
       android:hint="Fecha de Finalizacion"
       android:inputType="text"
-      tools:layout_editor_absoluteX="29dp"
-      tools:layout_editor_absoluteY="470dp" />
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.144"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.667" />
 
   <Button
       android:id="@+id/btnEnviar"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="Enviar"
-      tools:layout_editor_absoluteX="174dp"
-      tools:layout_editor_absoluteY="533dp" />
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.498"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.756" />
 
   <androidx.recyclerview.widget.RecyclerView
       android:id="@+id/rcvTicket"
       android:layout_width="410dp"
       android:layout_height="146dp"
-      tools:layout_editor_absoluteX="2dp"
-      tools:layout_editor_absoluteY="589dp" />
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

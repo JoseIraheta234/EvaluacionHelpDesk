@@ -6,7 +6,6 @@ import Jose.Iraheta.myapplication.R
 import Modelo.ClaseConexion
 import Modelo.dataClassTickets
 import android.content.Intent
-import android.net.Uri.Builder
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.EditText
@@ -152,5 +151,3 @@ class Adaptador(var Datos: List<dataClassTickets>) : RecyclerView.Adapter<ViewHo
     }
 
 
-
-}

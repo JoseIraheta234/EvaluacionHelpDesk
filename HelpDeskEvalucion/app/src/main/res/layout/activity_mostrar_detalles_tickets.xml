@@ -24,62 +24,94 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="79dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.109" />
 
     <TextView
         android:id="@+id/txtTitulodetallesT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        tools:layout_editor_absoluteX="177dp"
-        tools:layout_editor_absoluteY="134dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.189" />
 
     <TextView
         android:id="@+id/txtDescripciondetallesT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        tools:layout_editor_absoluteX="178dp"
-        tools:layout_editor_absoluteY="191dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.265" />
 
     <TextView
         android:id="@+id/txtAutordetallesT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        tools:layout_editor_absoluteX="177dp"
-        tools:layout_editor_absoluteY="241dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.331" />
 
     <TextView
         android:id="@+id/txtEmailContactodetallesT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        tools:layout_editor_absoluteX="179dp"
-        tools:layout_editor_absoluteY="285dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4" />
 
     <TextView
         android:id="@+id/txtFechaCdetallesT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        tools:layout_editor_absoluteX="180dp"
-        tools:layout_editor_absoluteY="335dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.469" />
 
     <TextView
         android:id="@+id/txtEstadodetallesT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        tools:layout_editor_absoluteX="180dp"
-        tools:layout_editor_absoluteY="386dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.547" />
 
     <TextView
         android:id="@+id/txtFechaFdetallesT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        tools:layout_editor_absoluteX="177dp"
-        tools:layout_editor_absoluteY="442dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.629" />
 </androidx.constraintlayout.widget.ConstraintLayout>

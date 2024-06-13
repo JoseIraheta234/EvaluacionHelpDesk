@@ -18,4 +18,5 @@ feche_Finalizacion_Ticket varchar2(50)
 
 drop table tbTicket
 
+select * from tbUsuarioo
 

@@ -9,7 +9,7 @@ class ClaseConexion {
     fun cadenaConexion(): Connection? {
 
         try {
-            val ip = "jdbc:oracle:thin:@192.168.0.9:1521:xe"
+            val ip = "jdbc:oracle:thin:@192.168.0.5:1521:xe"
             val usuario = "JOSE_DEVELOPER"
             val contrasena = "77541977"
 

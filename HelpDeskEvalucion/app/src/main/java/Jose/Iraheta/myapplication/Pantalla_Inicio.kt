@@ -14,8 +14,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import java.util.UUID
 
 class Pantalla_Inicio : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -62,8 +64,8 @@ class Pantalla_Inicio : AppCompatActivity() {
                 val estado = resultset.getString("estado_Ticket")
                 val fechaFinalizacion = resultset.getString("feche_Finalizacion_Ticket")
 
-                //val TodosLosValores = dataClassTickets(uuid, titulo, descripcion, autor, email, fechaCreacion, estado, fechaFinalizacion)
-                //tickets.add(TodosLosValores)
+                val TodosLosValores = dataClassTickets(uuid, titulo, descripcion, autor, email, fechaCreacion, estado, fechaFinalizacion)
+                tickets.add(TodosLosValores)
 
 
 
@@ -75,13 +77,42 @@ class Pantalla_Inicio : AppCompatActivity() {
 
         CoroutineScope(Dispatchers.IO).launch {
 
-            //val ticketsDB = obtenerDatosTickets()
-           // withContext(Dispatchers.Main){
-             //   val adapter = Adaptador(//)
-                //rcvTickets.adapter = //
+            val ticketsDB = obtenerDatosTickets()
 
-          //  }
+            withContext(Dispatchers.Main){
+                val adapter = Adaptador(ticketsDB)
+                rcvTickets.adapter = adapter
+            }
 
+
+        }
+
+
+        btnEnviar.setOnClickListener{
+            GlobalScope.launch(Dispatchers.IO) {
+                val objConexion = ClaseConexion().cadenaConexion()
+
+                val agregarTickets =
+
+                    objConexion?.prepareStatement("insert into tbTicket(uuid_Tiket,titulo_Ticket,descripcion_Ticket,autor_Ticket,email_Contacto_Autor,fecha_Creacion_Ticket,estado_Ticket,feche_Finalizacion_Ticket) values(?,?,?,?,?,?,?,?)")!!
+                agregarTickets.setString(1, UUID.randomUUID().toString())
+                agregarTickets.setString(2, txtTituloTicket.text.toString())
+                agregarTickets.setString(3, txtDescripcionTicket.text.toString())
+                agregarTickets.setString(4, txtAutorTicket.text.toString())
+                agregarTickets.setString(5, txtEmailTicket.text.toString())
+                agregarTickets.setString(6, txtFechaCreacionTicket.text.toString())
+                agregarTickets.setString(7, txtEstadoTicket.text.toString())
+                agregarTickets.setString(8, txtFechaCierreTicket.text.toString())
+                agregarTickets.execute()
+
+                val nuevosTickets = obtenerDatosTickets()
+
+                withContext(Dispatchers.Main) {
+                    (rcvTickets.adapter as? Adaptador)?.actualizarTickets(nuevosTickets)
+                }
+
+
+            }
         }
 
     }

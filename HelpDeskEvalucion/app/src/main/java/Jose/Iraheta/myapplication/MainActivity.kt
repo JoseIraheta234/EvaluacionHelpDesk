@@ -34,8 +34,24 @@ class MainActivity : AppCompatActivity() {
 
         btnIngresar.setOnClickListener {
             val pantallaInicio = Intent(this, Pantalla_Inicio::class.java)
-            startActivity(pantallaInicio)
+
+            GlobalScope.launch(Dispatchers.IO) {
+                val objConexion = ClaseConexion().cadenaConexion()
+
+                val comprobarUser = objConexion?.prepareStatement("select * from tbUsuarioo where correoElectronico = ? and clave = ?")!!
+                comprobarUser.setString(1,txtCorreoDeLogin.text.toString())
+                comprobarUser.setString(2,txtContrasenaLogin.text.toString())
+                val resultado = comprobarUser.executeQuery()
+
+                if(resultado.next()){
+                    startActivity(pantallaInicio)
+                } else{
+                    println("El usuario ingresado no fue encontrado revise sus credenciales")
+                }
             }
+
+
+        }
 
         btnRegistrar.setOnClickListener {
             val pantallaRegistrar = Intent(this, Registrarse::class.java)
